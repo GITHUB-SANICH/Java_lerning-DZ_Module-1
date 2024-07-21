@@ -24,7 +24,7 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             for (int j = 1; j < array[i].length; j++) {
                 minnEll = array[i][j] < array[i][j - 1] ? array[i][j] : array[i][j - 1];
-                if (minnEll < minnEllGlobal) minnEllGlobal = minnEll;
+                minnEllGlobal = minnEll < minnEllGlobal ? minnEll : minnEllGlobal;
             }
         }
         return minnEllGlobal;
